@@ -1,0 +1,23 @@
+\input{preamble.tex} % Required to load preamble
+
+\title{Report template, KU}
+\author{Lucas Daniel Paz Zuleta}
+\date{March 2024}
+
+
+\begin{document}
+\input{TexFiles/titlepage} % Inserts the titelpage
+
+
+\clearpage
+\pagenumbering{gobble} % Required to delete pagenumbering on the pages of the TC
+\renewcommand{\contentsname}{Table of contents} % Names the TC (table of contents)
+\tableofcontents % Inserts a TC
+\clearpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\input{TexFiles/text}
+
+
+\end{document}

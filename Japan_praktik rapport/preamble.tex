@@ -1,0 +1,56 @@
+\documentclass[explicit]{report} % Set text size to 12 pt
+
+% TECHNICAL LATEX STUFF --------------------
+\usepackage{silence} % For silencing warnings (bad practice tbh)
+\WarningFilter{latex}{You have requested package} %Silence warnings with "You have..."
+
+% LAYOUT --------------------
+\usepackage[]{geometry} % For customizing page layout
+%\usepackage{fontspec} % For more fonts
+\usepackage{setspace}
+\usepackage{titlesec} % For setting fonts on titles
+    \titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries}{}{0pt}{\Huge #1}
+    \titlespacing{\chapter}{0pt}{-50pt}{20pt}
+\usepackage[english, science]{KU-titlepage/ku-frontpage} % For KU frontpage (see readme.md for more)
+% \usepackage[geometry]{showframe} % Required to show the margins on the compiled pdf
+
+\geometry{a4paper,
+hmargin = {20mm, 20mm}, % Right and left margin
+vmargin = {30mm, 30mm} % Top and bottom margin
+}
+\onehalfspacing % Set line spacing to 1.5
+
+% FIGURES / FLOATS --------------------
+\usepackage{graphicx} % Required for inserting images
+\usepackage{caption}  % Required for changing the settings of the figure caption
+\usepackage{rotating} % Required for enabling specific page and figure  orientations
+\usepackage{float} % Required for improved control over floats
+\usepackage{wrapfig} % Required for text to be beside figures
+\usepackage{adjustbox} % Required to adjust the vertical alignment of a figure
+
+
+% MATH MODE PACKAGES --------------------
+\usepackage{amsmath}
+\usepackage{amstext} % for \text macro
+
+% OTHER --------------------
+\usepackage{lipsum} % Generates lorem ipsum text
+
+% LANGUAGES --------------------
+\usepackage[T1]{fontenc}    % Output font encoding for international characters
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[english, spanish, danish]{babel}    % Required for writing in the specified languages, more can be added if needed
+
+% UNITS --------------------
+\usepackage{siunitx}    % Required for usage of SI-Units
+\sisetup
+  {
+    exponent-to-prefix = true        ,
+    round-mode         = places     ,
+    round-precision    = 2           ,
+    scientific-notation = engineering,
+    zero-decimal-to-integer = false,
+  }
+\usepackage{chemformula}    % Required for shortcuts to write chemical compounds e.x \ch{CO2}
+\usepackage{gensymb}        % Required for making degreesymbol e.x \textdegree
